@@ -1,4 +1,16 @@
 plugins {
+  id("org.sonarqube") version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property("sonar.projectKey", "anhkhongy_geb-example-gradle")
+    property("sonar.organization", "anhkhongy")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
+
+plugins {
     id "idea"
     id "groovy"
     id "com.github.erdi.webdriver-binaries" version "2.7"
